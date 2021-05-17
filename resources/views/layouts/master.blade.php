@@ -180,8 +180,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item ">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-tachometer-alt "></i>
               <p>
                 Starter Pages
                 <i class="right fas fa-angle-left"></i>
@@ -189,7 +189,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="#" class="nav-link   ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Active Page</p>
                 </a>
@@ -204,7 +204,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
           <li class="nav-item">
             <router-link to="/profile" class="nav-link">
-              <i class="nav-icon fas fa-user-tie text-pink"></i>
+              <i class="nav-icon fas fa-user-tie  "></i>
               <p>
                 Profile
                 
@@ -213,7 +213,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
           <li class="nav-item">
             <router-link to="/dashboard" class="nav-link">
-              <i class="fas fa-tachometer-alt text-pink"></i>
+              <i class="fas fa-tachometer-alt"></i>
               <p>
                 dashboard
                 
@@ -222,12 +222,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-file-signature text-pink"></i>
+              <i class="nav-icon fas fa-file-signature "></i>
               <p>
                 contact
                 
               </p>
             </a>
+          </li>
+          
+
+            <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                <i class="nav-icon fas fa-toggle-off "></i>
+                {{ __('Logout') }}
+                
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf 
+            </form>
           </li>
         </ul>
       </nav>

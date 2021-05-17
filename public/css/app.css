@@ -31220,6 +31220,11 @@ a.text-muted:hover {
   color: #ffffff;
 }
 @charset "UTF-8";
+.router-link-exact-active {
+  background-color: #b5647f;
+  color: #f8fafc !important;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
